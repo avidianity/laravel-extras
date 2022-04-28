@@ -88,7 +88,7 @@ Please review [our security policy](../../security/policy) on how to report secu
 
 ## Credits
 
-- [:author_name](https://github.com/:author_username)
+- [John Michael Manlupig](https://github.com/avidianity)
 - [All Contributors](../../contributors)
 
 ## License
