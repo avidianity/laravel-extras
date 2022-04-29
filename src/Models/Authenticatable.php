@@ -1,6 +1,6 @@
 <?php
 
-namespace Avidianity\LaravelExtras;
+namespace Avidianity\LaravelExtras\Models;
 
 use Avidianity\LaravelExtras\Traits\HasUuid;
 use Avidianity\LaravelExtras\Traits\IsJWTSubject;
