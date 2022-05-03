@@ -3,8 +3,8 @@
 
 # Laravel Extras
 
-[![Latest Version on Packagist](https://img.shields.io/packagist/v/:vendor_slug/:package_slug.svg?style=flat-square)](https://packagist.org/packages/avidianity/laravel-extras)
-[![Total Downloads](https://img.shields.io/packagist/dt/:vendor_slug/:package_slug.svg?style=flat-square)](https://packagist.org/packages/avidianity/laravel-extras)
+[![Latest Version on Packagist](https://img.shields.io/packagist/v/avidianity/laravel-extras.svg?style=flat-square)](https://packagist.org/packages/avidianity/laravel-extras)
+[![Total Downloads](https://img.shields.io/packagist/dt/avidianity/laravel-extras.svg?style=flat-square)](https://packagist.org/packages/avidianity/laravel-extras)
 ---
 Extra powers for faster development in Laravel
 
