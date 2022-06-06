@@ -88,13 +88,45 @@ if (!function_exists('toBoolean')) {
 
 if (!function_exists('otp')) {
     /**
-     * Generate a 6-digit otp code
+     * Generate a n-digit otp code
      *
      * @param  int $size
      * @return string
      */
-    function otp(int $size): string
+    function otp(int $size = 6): string
     {
         return Str::limit((string)mt_rand(111111, 999999), $size, '');
+    }
+}
+
+if (!function_exists('data_has')) {
+    /**
+     * Checks if a key exists in an array or object using "dot" notation
+     *
+     * @param mixed $target
+     * @param string|array|int|null $key
+     * @return bool
+     */
+    function data_has($target, $key)
+    {
+        return !is_null(data_get($target, $key));
+    }
+}
+
+if (!function_exists('replicate')) {
+    /**
+     * Clone a value if its an object or return a default value
+     *
+     * @param mixed $value
+     * @param mixed $default
+     * @return mixed
+     */
+    function replicate($value, $default = null)
+    {
+        if (is_object($value)) {
+            return clone $value;
+        }
+
+        return $default;
     }
 }
