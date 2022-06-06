@@ -6,7 +6,7 @@ use Avidianity\LaravelExtras\Traits\HasUuid;
 use Avidianity\LaravelExtras\Traits\IsJWTSubject;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Model;
-use Illuminate\Notifications\Notifiable;
+use Avidianity\LaravelExtras\Traits\Notifiable;
 use PHPOpenSourceSaver\JWTAuth\Contracts\JWTSubject;
 
 abstract class Authenticatable extends Model implements JWTSubject

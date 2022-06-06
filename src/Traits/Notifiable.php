@@ -5,7 +5,7 @@ namespace Avidianity\LaravelExtras\Traits;
 use Avidianity\LaravelExtras\Models\Notification;
 use Illuminate\Notifications\Notifiable as BaseNotifiable;
 
-trait Notiable
+trait Notifiable
 {
     use BaseNotifiable;
 
