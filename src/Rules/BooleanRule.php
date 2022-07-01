@@ -2,13 +2,17 @@
 
 namespace Avidianity\LaravelExtras\Rules;
 
-use Illuminate\Validation\Rule;
-use Stringable;
+use Illuminate\Contracts\Validation\Rule;
 
-class BooleanRule implements Stringable
+class BooleanRule implements Rule
 {
-    public function __toString(): string
+    public function passes($attribute, $value)
     {
-        return Rule::in(['true', 'false', '1', '0', 1, 0, true, false])->__toString();
+        return toBoolean($value);
+    }
+
+    public function message()
+    {
+        return ':attribute is not a valid boolean value.';
     }
 }

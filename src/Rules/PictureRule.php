@@ -2,11 +2,13 @@
 
 namespace Avidianity\LaravelExtras\Rules;
 
+use Avidianity\LaravelExtras\Traits\Makeable;
 use Illuminate\Contracts\Support\Arrayable;
-use Stringable;
 
-class PictureRule implements Arrayable, Stringable
+class PictureRule implements Arrayable
 {
+    use Makeable;
+
     public function __construct(
         protected bool $required = true,
     ) {
@@ -17,18 +19,12 @@ class PictureRule implements Arrayable, Stringable
         return $this->required ? 'required' : 'nullable';
     }
 
-    public function __toString(): string
-    {
-        return $this->getRequiredRule() . '|file|mimes:png,jpg,jpeg,gif,svg|between:1,10000';
-    }
-
     public function toArray()
     {
         return [
             $this->getRequiredRule(),
             'file',
             'mimes:png,jpg,jpeg,gif,svg,webp',
-            'between:0,10000',
         ];
     }
 }

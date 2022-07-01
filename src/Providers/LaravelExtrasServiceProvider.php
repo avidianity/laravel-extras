@@ -30,7 +30,12 @@ class LaravelExtrasServiceProvider extends ServiceProvider
          * @return array
          */
         Factory::macro('data', function () {
+            /** @var Factory $this */
             return $this->make()->toArray();
         });
+
+        $this->publishes([
+            __DIR__ . '/../database/migrations/' => database_path('migrations')
+        ], 'laravel-extras-migrations');
     }
 }
