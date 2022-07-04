@@ -9,7 +9,7 @@ class BooleanRule implements Rule
     public function passes($attribute, $value)
     {
         if (is_bool($value)) {
-            return $value;
+            return true;
         }
 
         if (is_string($value) || is_numeric($value)) {
