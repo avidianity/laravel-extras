@@ -24,7 +24,7 @@
         "illuminate/support": "^9.0|^10.0",
         "illuminate/validation": "^9.0|^10.0",
         "league/iso3166": "^4.0",
-        "monolog/monolog": "^2.0"
+        "monolog/monolog": "^3.0"
     },
     "autoload": {
         "files": [

@@ -6,7 +6,7 @@ use Illuminate\Support\Facades\Date;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Str;
 use Monolog\Handler\AbstractProcessingHandler;
-use Monolog\Logger;
+use Monolog\Level;
 use Monolog\LogRecord;
 
 class DatabaseHandler extends AbstractProcessingHandler
@@ -15,7 +15,7 @@ class DatabaseHandler extends AbstractProcessingHandler
      * @param  int  $level
      * @param  bool  $bubble
      */
-    public function __construct($level = Logger::DEBUG, $bubble = true)
+    public function __construct($level = Level::Debug, $bubble = true)
     {
         parent::__construct($level, $bubble);
     }
